@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учёт рабочего времени</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+    <h1>Учёт рабочего времени</h1>
+
+    <!-- Сюда выводятся ошибки от сервера -->
+    <p id="message" class="message" hidden></p>
+
+    <section>
+      <h2>Сотрудники</h2>
+      <form id="add-employee-form" class="row">
+        <input id="employee-name" placeholder="Имя сотрудника" autocomplete="off">
+        <button type="submit">Добавить</button>
+      </form>
+      <ul id="employees" class="employees"></ul>
+      <p id="no-employees" class="muted" hidden>Пока нет сотрудников — добавьте первого.</p>
+    </section>
+
+    <section>
+      <h2>Отчёт за период</h2>
+      <form id="report-form" class="row">
+        <label>с <input type="date" id="date-from" required></label>
+        <label>по <input type="date" id="date-to" required></label>
+        <button type="submit">Показать</button>
+      </form>
+      <div id="report"></div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
