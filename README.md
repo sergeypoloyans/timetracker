@@ -20,7 +20,7 @@
 ## Запуск
 
 ```bash
-git clone <ссылка на репозиторий>
+git clone https://github.com/sergeypoloyans/timetracker.git
 cd timetracker
 
 python -m venv .venv
